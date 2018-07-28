@@ -6,5 +6,8 @@ create material.module.ts
 npm install --save hammerjs
 import 'hammerjs'; ... in main.ts
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 git remote add origin git@github.com:stevewitman/angularcoloradodotcom.git
+===== commit
+
+
+
