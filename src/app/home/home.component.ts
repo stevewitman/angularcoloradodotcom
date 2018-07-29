@@ -7,6 +7,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  isSubmitted = false;
+  inviteName = '';
+  inviteEmail = '';
 
   constructor() { }
 
@@ -15,6 +18,8 @@ export class HomeComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     console.log(form);
+    this.inviteName = form.value.name;
+    this.isSubmitted = form.value.email;
   }
 
 }

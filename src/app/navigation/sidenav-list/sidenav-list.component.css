@@ -1,15 +1,15 @@
 a span{
   text-decoration: none;
-  color:#303F9F;
+  color:#FFF;
 }
 
 a mat-icon{
   text-decoration: none;
-  color:#303F9F;
+  color:#FFF;
 }
 
 a:hover {
-  color: #303F9F;
+  color: #FFF;
 }
 
 .nav-caption {
@@ -17,5 +17,5 @@ a:hover {
   padding-left: 6px;
 }
 mat-nav-list {
-  background-color: #E8EAF6;
+  background-color: #5C6BC0;
 }

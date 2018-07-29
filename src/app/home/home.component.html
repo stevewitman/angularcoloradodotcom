@@ -1,30 +1,51 @@
-<section>
-  <div>Enter your name and email here to get your Angular Colorado Slack Team Invite</div>
-  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <mat-form-field>
-      <input
-        type="text"
-        matInput
-        placeholder="Your Name"
-        ngModel
-        name="name"
-        required
-        >
-      <mat-error>Name required.</mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <input
-        type="email"
-        matInput
-        placeholder="Your email"
-        ngModel
-        name="email"
-        email
-        required
-        #emailInput="ngModel">
-      <mat-error *ngIf="emailInput.hasError('required')">Email required.</mat-error>
-      <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid.</mat-error>
-    </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">Request Slack Team Invite</button>
+<!-- <section class="slack-invite-message">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <p>For Angular Devs in Colorado ... plus events, jobs, and more!</p>
+  </div>
+</section> -->
+<section class="slack-invite" *ngIf="!isSubmitted">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <span class="invite-text">Join our <img class="slack-logo" src="assets/img/slack.png"> team</span>
+  </div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="slack-form" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center" fxLayoutGap="20px" fxLayoutGap.gt-sm="45px">
+      <section>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Your Name"
+            ngModel
+            name="name"
+            required
+            >
+          <mat-error>Name required.</mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <mat-form-field>
+          <input
+            type="email"
+            matInput
+            placeholder="Your Email"
+            ngModel
+            name="email"
+            email
+            required
+            #emailInput="ngModel">
+          <mat-error *ngIf="emailInput.hasError('required')">Email required.</mat-error>
+          <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid.</mat-error>
+        </mat-form-field>
+      </section>
+      <section>
+        <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Request Slack Team Invite</button>
+      </section>
+    </div>
   </form>
+</section>
+<section class="slack-invite-sent"  *ngIf="isSubmitted">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <h2>Thank you, {{ inviteName }}</h2><br/>
+    <h2>Please check {{ inviteEmail }} for your invite from Slack.</h2>
+  </div>
 </section>

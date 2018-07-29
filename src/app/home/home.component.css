@@ -2,6 +2,40 @@ mat-form-field {
   width: 300px;
 }
 
-section {
-  /* background-color: #efe5fd; */
+.slack-invite-message {
+  color: black;
+  background-color: #C5CAE9;
+}
+
+.slack-invite {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+.slack-form {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.invite-text {
+  font-size: 28px;
+}
+
+.slack-logo {
+  margin-bottom: -21px;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 60px;
+}
+
+input:-webkit-autofill, input:focus:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #E3E4E6 inset;
+}
+
+.slack-invite-sent {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: rgb(194, 255, 181);
 }
