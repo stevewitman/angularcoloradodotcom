@@ -1,0 +1,21 @@
+a span{
+  text-decoration: none;
+  color:#303F9F;
+}
+
+a mat-icon{
+  text-decoration: none;
+  color:#303F9F;
+}
+
+a:hover {
+  color: #303F9F;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+mat-nav-list {
+  background-color: #E8EAF6;
+}

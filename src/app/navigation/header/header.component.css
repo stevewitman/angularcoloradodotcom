@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover, a:active {
+  color: lightgray;
+}
+
+.navigation-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row-two {
+  background-color: #E8EAF6;
+}
+
+.mat-toolbar-single-row {
+  height: 0px;
+}

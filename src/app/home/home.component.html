@@ -1,28 +1,29 @@
 <section>
+  <div>Enter your name and email here to get your Angular Colorado Slack Team Invite</div>
   <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <mat-form-field>
-        <input
-          type="email"
-          matInput
-          placeholder="Your email"
-          ngModel
-          name="email"
-          email
-          required
-          #emailInput="ngModel">
-          <mat-error *ngIf="emailInput.hasError('required')">Email required.</mat-error>
-          <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid.</mat-error>
+      <input
+        type="text"
+        matInput
+        placeholder="Your Name"
+        ngModel
+        name="name"
+        required
+        >
+      <mat-error>Name required.</mat-error>
     </mat-form-field>
     <mat-form-field>
-        <input
-          type="text"
-          matInput
-          placeholder="Your Name"
-          ngModel
-          name="name"
-          required
-          >
-        <mat-error>Name required.</mat-error>
+      <input
+        type="email"
+        matInput
+        placeholder="Your email"
+        ngModel
+        name="email"
+        email
+        required
+        #emailInput="ngModel">
+      <mat-error *ngIf="emailInput.hasError('required')">Email required.</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid.</mat-error>
     </mat-form-field>
     <button type="submit" mat-raised-button color="primary">Request Slack Team Invite</button>
   </form>
