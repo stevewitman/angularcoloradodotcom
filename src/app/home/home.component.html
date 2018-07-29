@@ -1,9 +1,4 @@
-<!-- <section class="slack-invite-message">
-  <div fxLayout="column" fxLayoutAlign="center center">
-    <p>For Angular Devs in Colorado ... plus events, jobs, and more!</p>
-  </div>
-</section> -->
-<section class="slack-invite" *ngIf="!isSubmitted">
+<section class="slack-invite" *ngIf="!isSubmitted" @flyInOut>
   <div fxLayout="row" fxLayoutAlign="center center">
     <span class="invite-text">Join our <img class="slack-logo" src="assets/img/slack.png"> team</span>
   </div>
@@ -14,7 +9,7 @@
           <input
             type="text"
             matInput
-            placeholder="Your Name"
+            placeholder="First and Last Name"
             ngModel
             name="name"
             required
@@ -27,7 +22,7 @@
           <input
             type="email"
             matInput
-            placeholder="Your Email"
+            placeholder="Email"
             ngModel
             name="email"
             email
@@ -43,9 +38,10 @@
     </div>
   </form>
 </section>
-<section class="slack-invite-sent"  *ngIf="isSubmitted">
-  <div fxLayout="column" fxLayoutAlign="center center">
-    <h2>Thank you, {{ inviteName }}</h2><br/>
-    <h2>Please check {{ inviteEmail }} for your invite from Slack.</h2>
+
+<section class="slack-invite-sent" *ngIf="isSubmitted"  @flyInOut>
+  <div fxLayout="column" fxLayoutAlign="center">
+    <p>Thank you <span class="sent">{{ inviteName }}</span>!<p>
+    <p>Please check <span class="sent"> {{ inviteEmail }} </span> for your invite from Slack.<p>
   </div>
 </section>

@@ -30,12 +30,20 @@ mat-form-field {
 }
 
 input:-webkit-autofill, input:focus:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #E3E4E6 inset;
+  -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
 }
 
 .slack-invite-sent {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 50px;
-  background-color: rgb(194, 255, 181);
 }
+
+p {
+  font-size: 20px;
+}
+
+.sent {
+  color: #5C6BC0;
+}
+
