@@ -43,7 +43,20 @@ p {
   font-size: 20px;
 }
 
+a {
+  text-decoration: none;
+ }
+
 .sent {
   color: #5C6BC0;
 }
 
+.note {
+  color: #7986CB;
+  font-size: 14px;
+}
+
+.help {
+  color: black;
+  font-size: 14px;
+}

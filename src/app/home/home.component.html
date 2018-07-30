@@ -41,7 +41,8 @@
 
 <section class="slack-invite-sent" *ngIf="isSubmitted"  @flyInOut>
   <div fxLayout="column" fxLayoutAlign="center">
-    <p>Thank you <span class="sent">{{ inviteName }}</span>!<p>
-    <p>Please check <span class="sent"> {{ inviteEmail }} </span> for your invite from Slack.<p>
+    <p>Thank you <span class="sent">{{ inviteName }}</span>, please check your email (<span class="sent">{{ inviteEmail }}</span>) for your invite from Slack.</p>
+    <p><span class="help">Note:</span><span class="note"> A new invite will NOT be sent if you have already requested an invite in the past.  Try logging in at <a href="https://angularcolorado.slack.com">angularcolorado.slack.com</a>.</span></p>
+    <p><span class="help">For help, please contact stevewitman@gmail.com</span></p>
   </div>
 </section>
